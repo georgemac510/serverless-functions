@@ -1,0 +1,12 @@
+# yaml-language-server: $schema=../../../.fluence/schemas/service.json
+
+# Defines a Marine service, most importantly the modules that the service consists of.
+# Documentation: https://github.com/fluencelabs/cli/tree/main/docs/configs/service.md
+
+version: 0
+
+name: portfolioService
+
+modules:
+  facade:
+    get: portfolioService

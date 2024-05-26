@@ -1,0 +1,24 @@
+aqua Deals declares *
+
+data MyDeployment:
+    chainNetworkId: u64
+    dealId: string
+    dealIdOriginal: string
+    definition: string
+    matched: bool
+    timestamp: string
+
+data Deals:
+    myDeployment: ?MyDeployment
+
+func get() -> Deals:
+    <- Deals(
+        myDeployment=?[MyDeployment(
+            definition="bafkreib2dlr3am5ufadbg6jcw2kx4eoz6fvgoxotfidkq3bfbdksvfmely",
+            timestamp="2024-05-26T15:45:51.887Z",
+            dealIdOriginal="0x2123C949865fc716f779897F2f6bE8e91D166846",
+            dealId="2123c949865fc716f779897f2f6be8e91d166846",
+            chainNetworkId=2358716091832359,
+            matched=false
+        )]
+    )

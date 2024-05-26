@@ -1,0 +1,5 @@
+aqua Services declares *
+
+
+service PortfolioService("portfolioService"):
+  fetch_portfolio_data() -> string

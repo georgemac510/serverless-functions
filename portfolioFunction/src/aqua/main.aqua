@@ -1,0 +1,37 @@
+aqua Main
+
+import "@fluencelabs/aqua-lib/builtin.aqua"
+import "@fluencelabs/aqua-lib/subnet.aqua"
+
+use "deals.aqua"
+use "hosts.aqua"
+import "services.aqua"
+
+-- IMPORTANT: Add exports for all functions that you want to run
+export runPortfolioService
+
+-- DOCUMENTATION:
+-- https://fluence.dev
+
+data Answer:
+    answer: ?string
+    worker: Worker
+
+func runPortfolioService() -> []Answer:
+    deals <- Deals.get()
+    dealId = deals.portfolioDeployment!.dealIdOriginal
+    answers: *Answer
+    on HOST_PEER_ID:
+        subnet <- Subnet.resolve(dealId)
+    if subnet.success == false:
+        Console.print(["Failed to resolve subnet: ", subnet.error])
+
+    for w <- subnet.workers:
+        if w.worker_id == nil:
+            answers <<- Answer(answer=nil, worker=w)
+        else:
+            on w.worker_id! via w.host_id:
+                answer <- PortfolioService.fetch_portfolio_data()
+                answers <<- Answer(answer=?[answer], worker=w)
+
+    <- answers
