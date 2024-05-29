@@ -19,6 +19,6 @@ func get() -> Deals:
             dealIdOriginal="0x203274622a060712a8832CA7ad862CfaD05B1eF8",
             dealId="203274622a060712a8832ca7ad862cfad05b1ef8",
             chainNetworkId=2358716091832359,
-            matched=false
+            matched=true
         )]
     )

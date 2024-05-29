@@ -51,7 +51,7 @@ export const runPortfolioService_script = `
                      )
                      (ap ("definition" "bafkreic5eovttx7nquf32xf6jnxwytytoz2ezdkvolmyraiulfcijalnty") %PortfolioDeployment_obj_map)
                     )
-                    (ap ("matched" false) %PortfolioDeployment_obj_map)
+                    (ap ("matched" true) %PortfolioDeployment_obj_map)
                    )
                    (ap ("timestamp" "2024-05-26T18:01:21.006Z") %PortfolioDeployment_obj_map)
                   )
