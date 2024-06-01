@@ -9,9 +9,8 @@ version: 1
 deals:
   dar:
     portfolioDeployment:
-      definition: bafkreic5eovttx7nquf32xf6jnxwytytoz2ezdkvolmyraiulfcijalnty
-      timestamp: 2024-05-26T18:01:21.006Z
+      definition: bafkreicpldtfwchwemnwgqlperdqefdc5gkvddz7orgfchatvyhowh3df4
+      timestamp: 2024-05-31T23:16:23.288Z
       dealIdOriginal: "0x203274622a060712a8832CA7ad862CfaD05B1eF8"
       dealId: 203274622a060712a8832ca7ad862cfad05b1ef8
       chainNetworkId: 2358716091832359
-      matched: true

@@ -8,7 +8,7 @@ version: 8
 
 deployments:
   portfolioDeployment:
-    targetWorkers: 3
+    targetWorkers: 1
     pricePerWorkerEpoch: "0.33"
     services: [ portfolioService ]
     spells: []

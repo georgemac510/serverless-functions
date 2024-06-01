@@ -1,0 +1,5 @@
+aqua Services declares *
+
+
+service UrlService("urlService"):
+  greeting(name: string) -> string

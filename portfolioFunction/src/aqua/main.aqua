@@ -35,3 +35,4 @@ func runPortfolioService() -> []Answer:
                 answers <<- Answer(answer=?[answer], worker=w)
 
     <- answers
+

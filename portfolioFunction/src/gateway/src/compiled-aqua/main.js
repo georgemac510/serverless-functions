@@ -43,17 +43,14 @@ export const runPortfolioService_script = `
                    (seq
                     (seq
                      (seq
-                      (seq
-                       (ap ("chainNetworkId" 2358716091832359) %PortfolioDeployment_obj_map)
-                       (ap ("dealId" "203274622a060712a8832ca7ad862cfad05b1ef8") %PortfolioDeployment_obj_map)
-                      )
-                      (ap ("dealIdOriginal" "0x203274622a060712a8832CA7ad862CfaD05B1eF8") %PortfolioDeployment_obj_map)
+                      (ap ("chainNetworkId" 2358716091832359) %PortfolioDeployment_obj_map)
+                      (ap ("dealId" "203274622a060712a8832ca7ad862cfad05b1ef8") %PortfolioDeployment_obj_map)
                      )
-                     (ap ("definition" "bafkreic5eovttx7nquf32xf6jnxwytytoz2ezdkvolmyraiulfcijalnty") %PortfolioDeployment_obj_map)
+                     (ap ("dealIdOriginal" "0x203274622a060712a8832CA7ad862CfaD05B1eF8") %PortfolioDeployment_obj_map)
                     )
-                    (ap ("matched" true) %PortfolioDeployment_obj_map)
+                    (ap ("definition" "bafkreicpldtfwchwemnwgqlperdqefdc5gkvddz7orgfchatvyhowh3df4") %PortfolioDeployment_obj_map)
                    )
-                   (ap ("timestamp" "2024-05-26T18:01:21.006Z") %PortfolioDeployment_obj_map)
+                   (ap ("timestamp" "2024-05-31T23:16:23.288Z") %PortfolioDeployment_obj_map)
                   )
                   (canon %init_peer_id% %PortfolioDeployment_obj_map  PortfolioDeployment_obj)
                  )
