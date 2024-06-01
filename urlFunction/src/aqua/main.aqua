@@ -38,7 +38,7 @@ func runDeployedServices() -> []Answer:
             answers <<- Answer(answer=nil, worker=w)
         else:
             on w.worker_id! via w.host_id:
-                answer <- UrlService.greeting("fluence")
+                answer <- UrlService.greeting("https://orbitdb-server.ngrok.dev/api/query/id?id=John")
                 answers <<- Answer(answer=?[answer], worker=w)
 
     <- answers

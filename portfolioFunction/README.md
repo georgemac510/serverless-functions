@@ -1,4 +1,4 @@
-## Successful deployment of portfolioFunction
+# Successful deployment of portfolioFunction
 
     fluence deploy
 
@@ -54,6 +54,9 @@
     Use fluence deal --help to see all the commands related to deals
     georgemac510@georgemac510-870-224:~/serverless-functions/portfolioFunction$
 
+
 ### Explorer URL
 
-    https://blockscout.dar.fluence.dev/address/0x203274622a060712a8832CA7ad862CfaD05B1eF8
+https://blockscout.dar.fluence.dev/address/0x203274622a060712a8832CA7ad862CfaD05B1eF8
+
+

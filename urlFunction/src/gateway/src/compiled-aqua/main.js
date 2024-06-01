@@ -97,10 +97,44 @@ export const showSubnet_script = `
         (seq
          (seq
           (seq
-           (call %init_peer_id% ("getDataSrv" "-relay-") [] -relay-)
+           (seq
+            (call %init_peer_id% ("getDataSrv" "-relay-") [] -relay-)
+            (new $option-inline
+             (seq
+              (xor
+               (seq
+                (new %MyDeployment_obj_map
+                 (seq
+                  (seq
+                   (seq
+                    (seq
+                     (seq
+                      (seq
+                       (ap ("chainNetworkId" 2358716091832359) %MyDeployment_obj_map)
+                       (ap ("dealId" "5d29c849ecb4224fcb599eb8f1095687e7c0d1ca") %MyDeployment_obj_map)
+                      )
+                      (ap ("dealIdOriginal" "0x5d29C849EcB4224FcB599eb8F1095687E7c0d1Ca") %MyDeployment_obj_map)
+                     )
+                     (ap ("definition" "bafkreidwuwuvsy75gntvf7zjhbeh5u7d262n46yimnyc7mn5mi3wydiija") %MyDeployment_obj_map)
+                    )
+                    (ap ("matched" true) %MyDeployment_obj_map)
+                   )
+                   (ap ("timestamp" "2024-06-01T19:13:58.030Z") %MyDeployment_obj_map)
+                  )
+                  (canon %init_peer_id% %MyDeployment_obj_map  MyDeployment_obj)
+                 )
+                )
+                (ap MyDeployment_obj $option-inline)
+               )
+               (null)
+              )
+              (canon %init_peer_id% $option-inline  #option-inline-0)
+             )
+            )
+           )
            (new %Deals_obj_map
             (seq
-             (ap ("myDeployment" []) %Deals_obj_map)
+             (ap ("myDeployment" #option-inline-0) %Deals_obj_map)
              (canon %init_peer_id% %Deals_obj_map  Deals_obj)
             )
            )
@@ -260,28 +294,28 @@ export const showSubnet_script = `
                       )
                      )
                      (par
-                      (new $option-inline
-                       (seq
-                        (xor
-                         (seq
-                          (canon w-0.$.worker_id.[0] $services_aliases  #push-to-stream-103)
-                          (ap #push-to-stream-103 $option-inline)
-                         )
-                         (null)
-                        )
-                        (canon w-0.$.worker_id.[0] $option-inline  #option-inline-0)
-                       )
-                      )
                       (new $option-inline-1
                        (seq
                         (xor
                          (seq
-                          (canon w-0.$.worker_id.[0] $spells_aliases  #push-to-stream-108)
-                          (ap #push-to-stream-108 $option-inline-1)
+                          (canon w-0.$.worker_id.[0] $services_aliases  #push-to-stream-119)
+                          (ap #push-to-stream-119 $option-inline-1)
                          )
                          (null)
                         )
                         (canon w-0.$.worker_id.[0] $option-inline-1  #option-inline-1-0)
+                       )
+                      )
+                      (new $option-inline-2
+                       (seq
+                        (xor
+                         (seq
+                          (canon w-0.$.worker_id.[0] $spells_aliases  #push-to-stream-124)
+                          (ap #push-to-stream-124 $option-inline-2)
+                         )
+                         (null)
+                        )
+                        (canon w-0.$.worker_id.[0] $option-inline-2  #option-inline-2-0)
                        )
                       )
                      )
@@ -292,9 +326,9 @@ export const showSubnet_script = `
                        (seq
                         (seq
                          (ap ("host_id" w-0.$.host_id) %WorkerServices_obj_map)
-                         (ap ("services" #option-inline-0) %WorkerServices_obj_map)
+                         (ap ("services" #option-inline-1-0) %WorkerServices_obj_map)
                         )
-                        (ap ("spells" #option-inline-1-0) %WorkerServices_obj_map)
+                        (ap ("spells" #option-inline-2-0) %WorkerServices_obj_map)
                        )
                        (ap ("worker_id" w-0.$.worker_id) %WorkerServices_obj_map)
                       )
@@ -567,10 +601,44 @@ export const runDeployedServices_script = `
         (seq
          (seq
           (seq
-           (call %init_peer_id% ("getDataSrv" "-relay-") [] -relay-)
+           (seq
+            (call %init_peer_id% ("getDataSrv" "-relay-") [] -relay-)
+            (new $option-inline
+             (seq
+              (xor
+               (seq
+                (new %MyDeployment_obj_map
+                 (seq
+                  (seq
+                   (seq
+                    (seq
+                     (seq
+                      (seq
+                       (ap ("chainNetworkId" 2358716091832359) %MyDeployment_obj_map)
+                       (ap ("dealId" "5d29c849ecb4224fcb599eb8f1095687e7c0d1ca") %MyDeployment_obj_map)
+                      )
+                      (ap ("dealIdOriginal" "0x5d29C849EcB4224FcB599eb8F1095687E7c0d1Ca") %MyDeployment_obj_map)
+                     )
+                     (ap ("definition" "bafkreidwuwuvsy75gntvf7zjhbeh5u7d262n46yimnyc7mn5mi3wydiija") %MyDeployment_obj_map)
+                    )
+                    (ap ("matched" true) %MyDeployment_obj_map)
+                   )
+                   (ap ("timestamp" "2024-06-01T19:13:58.030Z") %MyDeployment_obj_map)
+                  )
+                  (canon %init_peer_id% %MyDeployment_obj_map  MyDeployment_obj)
+                 )
+                )
+                (ap MyDeployment_obj $option-inline)
+               )
+               (null)
+              )
+              (canon %init_peer_id% $option-inline  #option-inline-0)
+             )
+            )
+           )
            (new %Deals_obj_map
             (seq
-             (ap ("myDeployment" []) %Deals_obj_map)
+             (ap ("myDeployment" #option-inline-0) %Deals_obj_map)
              (canon %init_peer_id% %Deals_obj_map  Deals_obj)
             )
            )
@@ -655,22 +723,22 @@ export const runDeployedServices_script = `
                         )
                        )
                       )
-                      (call w-0.$.worker_id.[0] ("urlService" "greeting") ["fluence"] ret-0)
+                      (call w-0.$.worker_id.[0] ("urlService" "greeting") ["https://orbitdb-server.ngrok.dev/api/query/id?id=John"] ret-0)
                      )
-                     (new $option-inline
+                     (new $option-inline-1
                       (seq
                        (xor
-                        (ap ret-0 $option-inline)
+                        (ap ret-0 $option-inline-1)
                         (null)
                        )
-                       (canon w-0.$.worker_id.[0] $option-inline  #option-inline-0)
+                       (canon w-0.$.worker_id.[0] $option-inline-1  #option-inline-1-0)
                       )
                      )
                     )
                     (new %Answer_obj-0_map
                      (seq
                       (seq
-                       (ap ("answer" #option-inline-0) %Answer_obj-0_map)
+                       (ap ("answer" #option-inline-1-0) %Answer_obj-0_map)
                        (ap ("worker" w-0) %Answer_obj-0_map)
                       )
                       (canon w-0.$.worker_id.[0] %Answer_obj-0_map  Answer_obj-0)

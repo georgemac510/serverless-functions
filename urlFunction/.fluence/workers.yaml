@@ -5,3 +5,13 @@
 # Documentation: https://github.com/fluencelabs/cli/tree/main/docs/configs/workers.md
 
 version: 1
+
+deals:
+  dar:
+    myDeployment:
+      definition: bafkreidwuwuvsy75gntvf7zjhbeh5u7d262n46yimnyc7mn5mi3wydiija
+      timestamp: 2024-06-01T19:13:58.030Z
+      dealIdOriginal: "0x5d29C849EcB4224FcB599eb8F1095687E7c0d1Ca"
+      dealId: 5d29c849ecb4224fcb599eb8f1095687e7c0d1ca
+      chainNetworkId: 2358716091832359
+      matched: true
